@@ -13,6 +13,11 @@
 		#subbutton{
 			margin-top: 20px;
 		}
+		#surveyQs{
+			margin-bottom: 10px;
+			border-bottom: 1px solid lightgrey;
+			padding-bottom: 20px;
+		}
 	</style>
 </head>
 <body>
@@ -34,7 +39,7 @@
 	  </div>
 	</div>
 
-	<div class="container">
+	<div id="surveyQs" class="container">
 	  <form>
 	    <div class="form-group">
 	      <label for="q1"><h3><b>Question 1</b></h3><h4>You love a good party</h4></label>
@@ -129,9 +134,13 @@
 	      </select>
 	      <button id="subbutton" type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
 
-	    
+	    </div>
 	  </form>
+	</div>
+	<div class="container">
+		<footer><p> <a href="/api/friends">API Friend List</a> | <a href="https://github.com/NeginNami/FriendFinder.git">GitHub Repo</a></p></footer>
 	</div>	
+	
 
 
 
