@@ -184,7 +184,7 @@
 			info.scores.push($('#q'+i+' :selected').text().charAt()); 
 
 
-		$.post("/api/friends",info,function (data) {
+	/*	$.post("/api/friends",info,function (data) {
 			
 			if (data) {
 				alert("U are added!");
@@ -193,7 +193,16 @@
 					alert("Sorry, an error occured. Please try later.")
 
 
-		});
+		}); */
+		$.ajax({
+	        type: 'POST',
+	        url: "/api/friends",
+	        contentType: "application/json",
+	        data:JSON.stringify(info),
+	        success: function (data) {
+	            alert("Succeded");
+	        }
+    	});
 		
 
 	});
