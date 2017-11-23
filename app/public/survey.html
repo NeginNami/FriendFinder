@@ -3,6 +3,8 @@
 <head>
 	<title>Survey</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<style type="text/css">
 		#about{
 			border-bottom: 1px solid lightgrey;
@@ -146,3 +148,57 @@
 
 </body>
 </html>
+
+<script type="text/javascript">
+	$("#subbutton").on("click",function (event) {
+		
+		event.preventDefault();
+		//console.log($("#usrName").val());
+		var notSelected=0;
+
+		if ($("#usrName").val()==="" ||$("#usrPhoto").val()==="" ) {
+			alert("Please fill out ur info");
+		}
+		
+
+		for (var i = 1; i < 11; i++) 
+			
+
+			if ($('#q'+i+' :selected').text()==="Select one") 
+				notSelected++;
+			
+		
+		console.log(notSelected);
+		if (notSelected>0) 
+			alert("Please answer all the questions!");
+
+		var info={
+			name: $("#usrName").val().trim() ,
+			photo: $("#usrPhoto").val().trim() ,
+			scores: []
+		};
+		console.log(info);
+	
+
+		for (var i = 1; i < 11; i++) 
+			info.scores.push($('#q'+i+' :selected').text().charAt()); 
+
+
+		$.post("/api/friends",info,function (data) {
+			
+			if (data) {
+				alert("U are added!");
+			}
+				else
+					alert("Sorry, an error occured. Please try later.")
+
+
+		});
+		
+
+	});
+
+
+
+
+</script>

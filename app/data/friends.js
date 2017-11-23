@@ -2,9 +2,9 @@
 
 var friendsArray=[
 	{
-		"name": "Elmo",
-		"photo": "...",
-		"scores":[
+		name: "Elmo",
+		photo: "...",
+		scores:[
 			2,
 			2,
 			1,
@@ -19,9 +19,9 @@ var friendsArray=[
 
 	},
 	{
-		"name": "Cookie Monster",
-		"photo": "...",
-		"scores":[
+		name: "Cookie Monster",
+		photo: "...",
+		scores:[
 			1,
 			3,
 			1,
@@ -36,9 +36,9 @@ var friendsArray=[
 
 	},
 	{
-		"name": "Oscar the Grouch",
-		"photo": "...",
-		"scores":[
+		name: "Oscar the Grouch",
+		photo: "...",
+		scores:[
 			1,
 			1,
 			1,
@@ -53,9 +53,9 @@ var friendsArray=[
 
 	},
 	{
-		"name": "Kermit the Frog",
-		"photo": "...",
-		"scores":[
+		name: "Kermit the Frog",
+		photo: "...",
+		scores:[
 			5,
 			1,
 			4,
@@ -70,9 +70,9 @@ var friendsArray=[
 
 	},
 	{
-		"name": "Abby Cadabby",
-		"photo": "...",
-		"scores":[
+		name: "Abby Cadabby",
+		photo: "...",
+		scores:[
 			2,
 			2,
 			1,
@@ -87,9 +87,9 @@ var friendsArray=[
 
 	},
 	{
-		"name": "Big Bird",
-		"photo": "...",
-		"scores":[
+		name: "Big Bird",
+		photo: "...",
+		scores:[
 			3,
 			2,
 			4,
@@ -102,7 +102,7 @@ var friendsArray=[
 			1
 		]
 
-	},
+	}
 ];
 
 module.exports = friendsArray;
