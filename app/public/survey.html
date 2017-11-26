@@ -166,9 +166,6 @@
   </div>
 </div>
 
-
-
-
 </body>
 </html>
 
@@ -216,13 +213,8 @@
 	        data:JSON.stringify(info),
 	        success: function (data) {
 
-	            alert("Succeded, Your result: "+data);
-	            console.log(data);
-
 	            $('#resultImg').attr("src",data.photo);
 	            $('#matchName').append(data.name);
-
-
 	            $('#resultModal').modal('show');
 
 	        }
@@ -230,8 +222,4 @@
 		
 
 	});
-
-
-
-
 </script>

@@ -1,8 +1,4 @@
 
-
-
-
-
 var friendsData= require("../data/friends"); 
 
 
@@ -28,17 +24,12 @@ module.exports = function(app) {
   	
 
   	for (var i = 0; i < friendsData.length; i++) {
-  		console.log("======================================");
   		diff[i]=0;
-  		for (var j = 0; j<10; j++) {
+  		for (var j = 0; j<10; j++) 
   			
-
   			diff[i]= diff[i]+ Math.abs(parseInt(req.body.scores[j])-parseInt(friendsData[i].scores[j]));
-  			
-  		}
   	}
-  	console.log(diff);
-
+  	
   	var lessDiffIndex=0;
   	var minDiff=diff[0];
   	for (var i = 1; i < diff.length; i++) {
