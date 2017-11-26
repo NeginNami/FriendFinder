@@ -21,7 +21,7 @@ module.exports = function(app) {
   	console.log(req.body.name);
   	console.log(req.body.scores);
   	console.log(req.body.scores[9]);
-  	//console.log(friendsData);
+  	
   	//-------------------------------------logic-------------------------
 
   	var diff=[];
@@ -31,10 +31,10 @@ module.exports = function(app) {
   		console.log("======================================");
   		diff[i]=0;
   		for (var j = 0; j<10; j++) {
-  			//console.log(counter+": "+(parseInt(friendsData[i].scores[j])+10));
+  			
 
   			diff[i]= diff[i]+ Math.abs(parseInt(req.body.scores[j])-parseInt(friendsData[i].scores[j]));
-  			console.log(Math.abs(parseInt(req.body.scores[j])-parseInt(friendsData[i].scores[j])));
+  			
   		}
   	}
   	console.log(diff);
@@ -47,19 +47,10 @@ module.exports = function(app) {
   			minDiff=diff[i];
   		}
   	}
-  	console.log("Less dif index: "+lessDiffIndex);
-  	console.log(friendsData[lessDiffIndex]);
-  	console.log(friendsData[lessDiffIndex].name);
-
-
-
 
 
   	//-------------------------------------Last Part------------------------
   	friendsData.push(req.body);
-  	console.log(friendsData);
-
-
 
   	res.json(friendsData[lessDiffIndex]);
 

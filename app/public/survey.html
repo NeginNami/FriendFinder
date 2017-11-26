@@ -177,7 +177,7 @@
 	$("#subbutton").on("click",function (event) {
 		
 		event.preventDefault();
-		//console.log($("#usrName").val());
+		
 		$('#matchName').empty();
 		var notSelected=0;
 
@@ -202,23 +202,12 @@
 			photo: $("#usrPhoto").val().trim() ,
 			scores: []
 		};
-		//console.log(info);
+		
 	
 
 		for (var i = 1; i < 11; i++) 
 			info.scores.push($('#q'+i+' :selected').text().charAt()); 
 
-
-	/*	$.post("/api/friends",info,function (data) {
-			
-			if (data) {
-				alert("U are added!");
-			}
-				else
-					alert("Sorry, an error occured. Please try later.")
-		
-
-		}); */
 		
 		$.ajax({
 	        type: 'POST',
@@ -242,8 +231,6 @@
 
 	});
 
-	
-$('#matchName').text("");
 
 
 
