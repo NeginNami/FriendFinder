@@ -58,7 +58,10 @@ module.exports = function(app) {
   	//-------------------------------------Last Part------------------------
   	friendsData.push(req.body);
   	console.log(friendsData);
-  	res.json(true);
+
+
+
+  	res.json(friendsData[lessDiffIndex]);
 
 
 

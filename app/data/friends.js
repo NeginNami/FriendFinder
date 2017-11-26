@@ -2,8 +2,8 @@
 
 var friendsArray=[
 	{
-		name: "Elmo",
-		photo: "...",
+		name: "Merilyn Monroe",
+		photo: "https://image.ibb.co/mo8uV6/150727_marilyn_monroe_09.jpg",
 		scores:[
 			"2",
 			"2",
@@ -19,8 +19,8 @@ var friendsArray=[
 
 	},
 	{
-		name: "Cookie Monster",
-		photo: "...",
+		name: "Elvis Presley",
+		photo: "https://image.ibb.co/gGRWA6/tmp_Km_XOp_O_7dbb0d56aa4849ac_main.jpg",
 		scores:[
 			"1",
 			"3",
@@ -36,8 +36,8 @@ var friendsArray=[
 
 	},
 	{
-		name: "Oscar the Grouch",
-		photo: "...",
+		name: "Barack Obama",
+		photo: "https://image.ibb.co/cBqxiR/obama.jpg",
 		scores:[
 			"1",
 			"1",
@@ -53,8 +53,8 @@ var friendsArray=[
 
 	},
 	{
-		name: "Kermit the Frog",
-		photo: "...",
+		name: "Princess Diana",
+		photo: "https://image.ibb.co/c2txHm/170726123442_princess_diana_life_01_restricted_super_169.jpg",
 		scores:[
 			"5",
 			"1",
@@ -70,8 +70,8 @@ var friendsArray=[
 
 	},
 	{
-		name: "Abby Cadabby",
-		photo: "...",
+		name: "Bill Gates",
+		photo: "https://image.ibb.co/hMBpV6/Bill_Gates_VR_Education.jpg",
 		scores:[
 			"2",
 			"2",
@@ -87,8 +87,8 @@ var friendsArray=[
 
 	},
 	{
-		name: "Big Bird",
-		photo: "...",
+		name: "Madonna",
+		photo: "https://image.ibb.co/f04hiR/00000118_01.jpg",
 		scores:[
 			"3",
 			"2",

@@ -144,16 +144,41 @@
 	</div>	
 	
 
+<!-- Modal -->
+<div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="resultModalLabel">Best Match:</h3>
+        	<h4 id="matchName"></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img id="resultImg" class="img-responsive">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
 </body>
 </html>
 
 <script type="text/javascript">
+	
 	$("#subbutton").on("click",function (event) {
 		
 		event.preventDefault();
 		//console.log($("#usrName").val());
+		$('#matchName').empty();
 		var notSelected=0;
 
 		if ($("#usrName").val()==="" ||$("#usrPhoto").val()==="" ) {
@@ -177,7 +202,7 @@
 			photo: $("#usrPhoto").val().trim() ,
 			scores: []
 		};
-		console.log(info);
+		//console.log(info);
 	
 
 		for (var i = 1; i < 11; i++) 
@@ -191,22 +216,34 @@
 			}
 				else
 					alert("Sorry, an error occured. Please try later.")
-
+		
 
 		}); */
+		
 		$.ajax({
 	        type: 'POST',
 	        url: "/api/friends",
 	        contentType: "application/json",
 	        data:JSON.stringify(info),
 	        success: function (data) {
-	            alert("Succeded");
+
+	            alert("Succeded, Your result: "+data);
+	            console.log(data);
+
+	            $('#resultImg').attr("src",data.photo);
+	            $('#matchName').append(data.name);
+
+
+	            $('#resultModal').modal('show');
+
 	        }
     	});
 		
 
 	});
 
+	
+$('#matchName').text("");
 
 
 
