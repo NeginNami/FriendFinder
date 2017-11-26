@@ -12,12 +12,7 @@ module.exports = function(app) {
 
 
   app.post("/api/friends", function(req, res) {
-   
-  	console.log(req.body);
-  	console.log(req.body.name);
-  	console.log(req.body.scores);
-  	console.log(req.body.scores[9]);
-  	
+  
   	//-------------------------------------logic-------------------------
 
   	var diff=[];
@@ -45,10 +40,7 @@ module.exports = function(app) {
 
   	res.json(friendsData[lessDiffIndex]);
 
-
-
   });
-
 
 
 };
